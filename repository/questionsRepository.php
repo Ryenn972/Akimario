@@ -11,13 +11,13 @@ function getFirstQuestion(){
     return $query->fetch();
 }
 
-function getCurrentQuestions(){
+function getQuestionById(int $id){
     
     $pdo = getConnexion();
     
-    $query = $pdo -> prepare("SELECT * FROM questions WHERE first_question = ?");
+    $query = $pdo -> prepare("SELECT * FROM questions WHERE id = ?");
     
-    $query->execute();
+    $query->execute([$id]);
     
     return $query->fetch();
 }

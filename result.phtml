@@ -1,0 +1,9 @@
+    <section class="result">
+        <h1>Akimario pense que vous avez choisi :</h1>
+        
+        <h2><?= htmlspecialchars($result['name']); ?></h2>
+        <img src="img/<?= htmlspecialchars($result['visual']); ?>" alt="<?= htmlspecialchars($result['name']); ?>" width="200">
+        <p><?= htmlspecialchars($result['description']); ?></p>
+        
+        <a href="quiz.php">Rejouer</a>
+    </section>

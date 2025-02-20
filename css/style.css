@@ -2,7 +2,8 @@
 body {
     font-family: sans-serif;
     background-image: url(../img/wallpaper.jpg);
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
     color: black;
     margin: 0;
     padding: 0;
@@ -80,6 +81,14 @@ input {
     text-align: center;
 }
 
+.result {
+    text-align: center;
+}
+
+.quiz {
+    text-align: center;
+}
+
 /* Style pour les questions */
 .question {
     font-size: 1.2em;
@@ -117,9 +126,13 @@ input {
 footer {
     text-align: center;
     margin-top: 20px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     font-size: 16px;
     background-color: rgba(255,255,255,0.8);
-    position: absolute;
-    bottom: 0;
     width: 100%;
+}
+
+.last-line {
+    margin-bottom: 0;
 }
