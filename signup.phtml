@@ -15,10 +15,16 @@
             <label for="new-password">Mot de passe :</label>
             <input type="password" id="new-password" name="password" required>
             
-            <p>Vous avez un compte ?<a href="index.php"> Connectez-vous !</a></p>
+            <p>Vous avez un compte ?<a href="login.php"> Connectez-vous !</a></p>
             
             <button>S'inscrire</button>
         </form>
+
+        <?php if (!empty($errorMessage)): ?>
+            <div class="error">
+                <?= htmlspecialchars($errorMessage) ?>
+            </div>
+        <?php endif; ?>
 
         
     </div>

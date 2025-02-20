@@ -21,10 +21,10 @@ if(!empty($_POST)){
             
             // Création d'une session
             $_SESSION["user"] = $user["pseudo"];
-            echo 'Connecté !';
-            // Redirection vers la page top secrète
-            //header("Location: secret.php");
-            //exit;
+            
+            // Redirection vers la page d'accueil
+            header("Location: home.php");
+            exit;
         }
         else{
             $error = "Identifiant ou mot de passe incorrect";
@@ -41,5 +41,5 @@ if(!empty($_POST)){
    
 }
 
-$template = "index";
+$template = "login";
 include "layout.phtml";

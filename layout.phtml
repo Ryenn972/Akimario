@@ -16,7 +16,11 @@
     
     <main>
         
+        <img src="img/genie_miitopia.png">
         <?php include "$template.phtml" ?>
+        <?php if(isset($_SESSION['user'])): ?>
+           <a href="logout.php">Se déconnecter</a>
+        <?php endif; ?>
         
     </main>
 </body>

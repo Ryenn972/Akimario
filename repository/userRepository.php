@@ -9,6 +9,19 @@ function createUser(string $email, string $pseudo, string $password){
     $query->execute([$pseudo, $email, $password]);
 }
 
+// Fonction me permettant de chercher si un compte avec ce pseudo ou cette adresse mail existe déjà
+function userExists($email, $pseudo) {
+    
+    $pdo = getConnexion();
+    
+    $query = $pdo -> prepare("SELECT COUNT(*) FROM users WHERE email = ? OR pseudo = ?");
+    
+    $query->execute([$email, $pseudo]);
+    
+    // fetchColumn() me permet de ne récupérer qu'une seule colonne et de vérifier si la fonction COUNT renvoie un résultat positif
+    return $query->fetchColumn() > 0;
+}
+
 function getUserByEmail(string $email){
     
     $pdo = getConnexion();

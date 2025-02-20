@@ -13,17 +13,21 @@ if(!empty($_POST)){
     $regexSpe = "/(?=.*[\W_]).*/";
     
     if(preg_match($regexUpper, $password) && preg_match($regexLower, $password) && preg_match($regexNb, $password) && preg_match($regexSpe, $password) && strlen($password) >= 8){
-        
+            
+        // Je vérifie si l'utilisateur existe déjà
+        if (userExists($_POST["email"], $_POST["pseudo"])) {
+            $errorMessage = "Un compte avec cet email ou pseudo existe déjà.";
+        } else {
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
         
             //appeler la fonction qui va insérer un utilisateur
             createUser($_POST["email"], $_POST["pseudo"], $passwordHash);
-            echo 'Compte créé !';
             
-            header("Location:home.php");
+            header("Location: home.php");
             exit;
-        
-        
+        }
+    } else {
+        $errorMessage = "Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.";
     }
     
 }
