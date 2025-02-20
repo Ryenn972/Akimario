@@ -10,5 +10,5 @@ if (!isset($_SESSION['user'])) {
     exit();
 }
 
-$template = "home";
+$template = "index";
 include "layout.phtml";

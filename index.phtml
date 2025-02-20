@@ -1,4 +1,15 @@
-    <h1>Landing page</h1>
-    <p>landing page</p>
-    <a href="login.php">Se connecter</a>
-    <a href="signup.php">S'inscrire</a>
+    <?php if(!isset($_SESSION['user'])): ?>
+        <section class="landing-page">
+            <h1>Faites deviner votre personnage à Akimario !</h1>
+            <p>Bienvenue dans l'univers magique de Mario ! Plongez dans une aventure interactive où Akimario, le génie des devinettes, vous défie de penser à un personnage de l'univers Mario. Répondez à ses questions astucieuses et voyez s'il peut deviner qui vous avez en tête ! Que vous soyez fan de Mario, Luigi, Peach, Bowser ou autre, mettez vos connaissances à l'épreuve et amusez-vous en famille ou entre amis. Prêt à relever le défi ? Jouez dès maintenant et découvrez la magie d'Akimario dans le monde coloré de Nintendo !</p>
+            <a href="login.php">Se connecter</a>
+            <a href="signup.php">S'inscrire</a>
+        </section>
+    <?php endif; ?>
+    
+    <?php if(isset($_SESSION['user'])): ?>
+        <section class="home">
+            <h1>Bienvenue <?= $_SESSION['user'] ?></h1>
+            <a href="quiz.php">Jouer</a>
+        </section>
+    <?php endif; ?>

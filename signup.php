@@ -23,7 +23,8 @@ if(!empty($_POST)){
             //appeler la fonction qui va insérer un utilisateur
             createUser($_POST["email"], $_POST["pseudo"], $passwordHash);
             
-            header("Location: home.php");
+            // Redirection vers la page d'accueil
+            header("Location: login.php");
             exit;
         }
     } else {

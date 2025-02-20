@@ -23,7 +23,7 @@ if(!empty($_POST)){
             $_SESSION["user"] = $user["pseudo"];
             
             // Redirection vers la page d'accueil
-            header("Location: home.php");
+            header("Location: index.php");
             exit;
         }
         else{
@@ -33,12 +33,6 @@ if(!empty($_POST)){
     else{
          $error = "Identifiant ou mot de passe incorrect";
     }
-    
-    //2 comparer le hash avec le mdp saisi dans le form 
-        //si c'est ok, on créer la session
-        //si pas ok, on affiche une erreur 
-    
-   
 }
 
 $template = "login";

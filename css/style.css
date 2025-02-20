@@ -1,0 +1,125 @@
+/* Style général pour le corps de la page */
+body {
+    font-family: sans-serif;
+    background-image: url(../img/wallpaper.jpg);
+    background-size: cover;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: #f5b201;
+    border-radius: 0.3em;
+    padding: 0.5em;
+}
+
+button {
+    color: black;
+    background-color: #f5b201;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style pour le conteneur principal */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 20px;
+    padding: 2em;
+    font-size: 16px;
+    background-color: rgba(255,69,84,0.6);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style pour l'image */
+img {
+    width: 8em;
+}
+
+/* Style pour le titre */
+h1 {
+    text-align: center;
+    color: #d41e2c; /* Rouge Mario */
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Style pour le formulaire */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    margin-bottom: 1em;
+}
+
+.home {
+    text-align: center;
+}
+
+/* Style pour les questions */
+.question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style pour les boutons de choix */
+.choice-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #d41e2c; /* Rouge Mario */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.choice-button:hover {
+    background-color: #b01a27; /* Rouge plus foncé au survol */
+}
+
+/* Style pour les images des personnages */
+.character-image {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour le pied de page */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: rgba(255,255,255,0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

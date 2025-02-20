@@ -11,17 +11,37 @@
 <body>
     
     <header>
-        
+        <nav>
+            <div>
+                <a href="index.php">Accueil</a>
+            </div>
+            <?php if(!isset($_SESSION['user'])): ?>
+                
+                <div>
+                    <a href="signup.php">S'inscrire</a>
+                    <a href="login.php">Se connecter</a>
+                </div>
+            <?php endif; ?>
+            
+            <?php if(isset($_SESSION['user'])): ?>
+                <div>
+                    <a href="account.php">Mon compte</a>
+                    <a href="logout.php">Se déconnecter</a>
+                </div>
+            <?php endif; ?>
+        </nav>
     </header>
     
     <main>
         
         <img src="img/genie_miitopia.png">
-        <?php include "$template.phtml" ?>
-        <?php if(isset($_SESSION['user'])): ?>
-           <a href="logout.php">Se déconnecter</a>
-        <?php endif; ?>
         
+        <div class="container">
+        
+            <?php include "$template.phtml" ?>
+        
+        </div>
+    
     </main>
 </body>
 
