@@ -1,8 +1,15 @@
     <section class="quiz">
-        <h1><?php echo htmlspecialchars($question['text_question']); ?></h1>
+        <!--<h1><?= htmlspecialchars($question['text_question']); ?></h1>
     
         <form method="POST">
             <button type="submit" name="response" value="1">Oui</button>
             <button type="submit" name="response" value="0">Non</button>
-        </form>
+        </form>-->
+        <!-- Afficher la question actuelle -->
+    <h1><?php echo htmlspecialchars($question['text_question']); ?></h1>
+
+    <form method="post">
+        <button type="submit" name="response" value="1">Oui</button>
+        <button type="submit" name="response" value="0">Non</button>
+    </form>
     </section>

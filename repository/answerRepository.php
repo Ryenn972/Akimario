@@ -1,12 +1,12 @@
 <?php
 
-function getNextStep(int $questionId, int $response){
+function getNextStep(int $question, int $response){
     
     $pdo = getConnexion();
     
     $query = $pdo -> prepare("SELECT * FROM answer WHERE id_questions = ? AND response = ?");
     
-    $query->execute([$questionId, $response]);
+    $query->execute([$question, $response]);
     
     return $query->fetch();
 }
