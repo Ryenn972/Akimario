@@ -1,0 +1,24 @@
+
+    <h1>Connexion</h1>
+    <div class="container">
+        <form method="post" action="index.php">
+            <label for="email">Email :</label>
+            <input type="text" id="email" name="email" value="<?= isset($_POST["email"]) ? $_POST["email"]: "" ?>" required>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="hidden" name="ville" />
+            <p>Pas de compte ?<a href="signup.php">Créez-en un !</a></p>
+
+            <button>Se connecter</button>
+        </form>
+
+        
+        <?php if(isset($error)): ?>
+        
+        <p><?= $error ?></p>
+        
+        <?php endif; ?>
+    </div>
+
