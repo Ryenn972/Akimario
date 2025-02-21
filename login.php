@@ -2,8 +2,7 @@
 
 include "config/database.php";
 include "repository/userRepository.php";
-include "repository/answerRepository.php";
-include "repository/questionsRepository.php";
+
 
 // Démarrage du système de session
 session_start();

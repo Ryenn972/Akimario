@@ -55,3 +55,32 @@ function getIdByName(string $name){
     
     return $query->fetch();
 }
+
+function getUserByPseudo($pseudo){
+    
+    $pdo = getConnexion();
+    
+    $query = $pdo -> prepare("SELECT * FROM users WHERE pseudo = ?");
+    
+    $query->execute([$pseudo]);
+    
+    return $query->fetch();
+}
+
+function updateUserPassword($userId, $newPasswordHash){
+    
+    $pdo = getConnexion();
+    
+    $query = $pdo -> prepare("UPDATE users SET password = ? WHERE id = ?");
+    
+    $query->execute([$newPasswordHash, $userId]);
+}
+
+function deleteUser($userId){
+    
+    $pdo = getConnexion();
+    
+    $query = $pdo -> prepare("DELETE FROM users WHERE id = ?");
+    
+    $query->execute([$userId]);
+}
